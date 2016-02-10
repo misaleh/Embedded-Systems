@@ -1,5 +1,6 @@
 # Embedded-Systems
 Some embedded systems projects
+First Project
 A state machine that describes flasher system of a car ,2 LEDS shall emulate the
 care real flashers , 3 input switches represent the flashing input by user to
 Flash right ,Flash left or flash both ( STOP or HAZARD state )(the image of the state machins is attached)
