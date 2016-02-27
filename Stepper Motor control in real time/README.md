@@ -5,8 +5,11 @@
 
 
 **Simulation tool** :proteus 7.7
+
 **Frequency** : 1MHZ
+
 **Required**:
+
 The hardware of the code as shown in the schematic, contain of one stepper motor four pushbuttons and 4 leds 
 The 4 buttons : 
 		1-used to switch between half step mode and full step mode for the stepper motor
