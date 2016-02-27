@@ -1,8 +1,12 @@
-Target : Atmega32
-Toolchain : Atmel studio 6.0
-Simulation tool :proteus 7.7
-Frequency : 1MHZ
-Required:
+**Target** : Atmega32
+
+
+**Toolchain** : Atmel studio 6.0
+
+
+**Simulation tool** :proteus 7.7
+**Frequency** : 1MHZ
+**Required**:
 The hardware of the code as shown in the schematic, contain of one stepper motor four pushbuttons and 4 leds 
 The 4 buttons : 
 		1-used to switch between half step mode and full step mode for the stepper motor
@@ -18,7 +22,7 @@ The 4 Leds :
 all the leds flash with frequency 4hz
 the response has to be in real time  
 
-Implementaion :
+**Implementaion** :
 
 To satisfy the time requirements there is a periodic interrupt every 2 ms that sets or change flags for stepper and led functions.
 >( ledFlag_RIGHT(), ledFlag_LEFT, ledFlag_HALF, ledFlag_FULL , Stepper_Flag )
@@ -34,18 +38,18 @@ and to stop the stepper.
 
 The code is implemented using mealy state machine with 4 states move half right, move half left, move full right and move full left.
  written as
-> (typedef enum state { Half_Right,Full_Right,Half_Left,Full_Left } Mealy_state;)
+> typedef enum state { Half_Right,Full_Right,Half_Left,Full_Left } Mealy_state;
 
 Each state has 4 charatristics first led to flash(right or left) , second lef to flash(full or half), the stepper function(one of the described above)
 and finally the next state depending on input	
 written as 
 
 >typedef struct {
->void (*FunctionPointerStepper)(unsigned char s); /*For stepper motor*/
->void (*FunctionPointerLeds1)(void);
->void (*FunctionPointerLeds2)(void);
->Mealy_state nexState[4]; /*4 states */  
->  }StateType;  
+void (*FunctionPointerStepper)(unsigned char s); /*For stepper motor*/
+void (*FunctionPointerLeds1)(void);
+void (*FunctionPointerLeds2)(void);
+Mealy_state nexState[4]; /*4 states */  
+  }StateType;  
   
 in the main code the defition of the state machine is
 >	 	StateType MealyState[4] ={
