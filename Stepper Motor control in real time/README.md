@@ -12,18 +12,32 @@
 
 The hardware of the code as shown in the schematic, contain of one stepper motor four pushbuttons and 4 leds 
 The 4 buttons : 
+
 		1-used to switch between half step mode and full step mode for the stepper motor
+		
 		2-used to change the direction of the stepper motor form right to left and vice versa,
 		  every click will change the direcion
+		  
 		3-increase the speed of the stepper motor
+		
 		4-decrease the speed of the stepper motor
+		
 The 4 Leds :
+
 		1-indication for stepper moving right
+		
 		2-indication for stepper moving Left
+		
 		3-indication for stepper moving in half step mode
+		
 		4-indication for stepper moving full step mode
+		
 all the leds flash with frequency 4hz
+
+
 the response has to be in real time  
+
+
 
 **Implementaion** :
 
