@@ -8,7 +8,7 @@
 
 **Frequency** : 1MHZ
 
-**Required**:
+### **Required**:
 
 The hardware of the code as shown in the schematic, contain of one stepper motor four pushbuttons and 4 leds 
 
