@@ -42,7 +42,9 @@ the response has to be in real time
 
 
 
-#**Implementaion** :
+
+**Implementaion** :
+--------------------
 
 To satisfy the time requirements there is a periodic interrupt every 2 ms that sets or change flags for stepper and led functions.
 >( ledFlag_RIGHT(), ledFlag_LEFT, ledFlag_HALF, ledFlag_FULL , Stepper_Flag )
